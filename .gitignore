@@ -1,0 +1,14 @@
+node_modules
+coverage
+reports/jest-html-reporters-temp/data
+screenshots
+.env
+*rough*.ts
+.idea
+downloads
+video
+videos
+screenshots
+jest-reports
+allure*
+logs

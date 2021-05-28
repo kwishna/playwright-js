@@ -1,0 +1,36 @@
+{
+  "name": "playwrightlearn",
+  "version": "1.0.0",
+  "description": "Playwright Automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest"
+  },
+  "keywords": [],
+  "author": "KrishnaKrSingh",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-typescript": "^7.13.0",
+    "@babel/register": "^7.13.16",
+    "@cucumber/cucumber": "^7.2.1",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.6.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "jest": "^26.6.3",
+    "jest-allure2-adapter": "^0.3.11",
+    "jest-html-reporters": "^2.1.6",
+    "jest-image-snapshot": "^4.5.0",
+    "jest-junit": "^12.0.0",
+    "moment": "^2.29.1",
+    "playwright-core": "^1.11.1",
+    "prettier": "^2.3.0",
+    "project-root-directory": "^1.0.3",
+    "ts-config": "^20.10.0",
+    "ts-jest": "^26.5.6",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  }
+}
