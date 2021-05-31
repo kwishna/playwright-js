@@ -1,4 +1,4 @@
-import {Browser, BrowserContext, BrowserServer, chromium, FileChooser, Page} from "playwright-core";
+import {Browser, BrowserContext, BrowserServer, chromium, Page} from 'playwright-core';
 import BasePage from "../pages/base_page";
 
 let basePage;
@@ -14,8 +14,12 @@ describe("PoC For Playwright", () => {
         browser = await chromium.launch({
             args: ["--start-maximized"],
             executablePath: process.env.CHROME_PATH,
-            headless: false
+            headless: true
         })
+
+        // browser = await chromium.connectOverCDP({
+        //     endpointURL: 'wss://cloud.testingbot.com?key=cdbcbd135a8e6c646d1126bf2a2f13c4&secret=00c135b18a6e969c8e751df89e6883dc&browserName=chrome&browserVersion=latest'
+        // })
 
         browserContext = await browser.newContext({
             acceptDownloads: true,
@@ -69,7 +73,7 @@ describe("PoC For Playwright", () => {
         })
     })
 
-    test("should work perfect - 3", async () => {
+    test("should work perfect - 5", async () => {
         await basePage.open_url("https://the-internet.herokuapp.com/");
     })
 

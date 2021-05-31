@@ -1,4 +1,4 @@
-import log4js from 'log4js';
+import log4js from "log4js";
 import moment from 'moment';
 // import log4js from "log4js"/;
 // export const log4j = log4js.configure({

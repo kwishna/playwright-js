@@ -1,5 +1,4 @@
 import {decodeString} from "../src/utils/utils";
-
 const basic_caps = {
     'browserstack.user': `${decodeString(process.env.BROWSERSTACK_USER)}`,
     'browserstack.key': `${decodeString(process.env.BROWSERSTACK_KEY)}`,
@@ -13,8 +12,7 @@ const basic_caps = {
     'name': 'End to End Smoke Test On ' + new Date().toLocaleString(),
     'build': 'Jest Selenium Webdriver',
     'project': 'Selenium-Js',
-}
-
+};
 export const bs_win_chrome90 = {
     ...basic_caps,
     'os': 'Windows',
@@ -22,7 +20,6 @@ export const bs_win_chrome90 = {
     'browserName': 'chrome',
     'browserstack.seleniumLogs': 'true',
 };
-
 export const iPhone = {
     ...basic_caps,
     "os_version": "14",
@@ -31,12 +28,11 @@ export const iPhone = {
     "browserName": "iPhone",
     'browserstack.appiumLogs': 'true',
 };
-
 export const safari = {
     ...basic_caps,
-    "os" : "OS X",
-    "os_version" : "Big Sur",
-    "browserName" : "Safari",
-    "browser_version" : "14.0",
-    "browserstack.local" : "false"
-}
+    "os": "OS X",
+    "os_version": "Big Sur",
+    "browserName": "Safari",
+    "browser_version": "14.0",
+    "browserstack.local": "false"
+};

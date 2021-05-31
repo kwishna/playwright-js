@@ -1,4 +1,4 @@
-import {BrowserFactory} from "../../playwright-engine-v2/factory/driver_factory_v2";
+import {BrowserFactory} from "../factory/driver_factory_v2";
 import {Browser, BrowserContext, Page} from "playwright-core";
 import {chromeConfiguration} from "../configurations/browser_configurations";
 

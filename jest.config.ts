@@ -8,17 +8,24 @@ dotenv.config({path: './.env'});
 
 export default async (): Promise<Config.InitialOptions> => {
 
-let tests: Array<string> = [
-  "**/__tests__/**/*.[jt]s?(x)",
-  "**/?(*.)+(spec|test).[tj]s?(x)",
-  "**/__tests__/**/*.[t]s",
-  "**/?(*.)+(spec|test).[t]s"
-]
+let tests: Array<string>;
+const test: string = process.env.TEST || "";
+
+if(test.toLowerCase() == "api") {
+  tests = ["**/api/**/?(*.)+(spec|test).[t]s"]
+}
+else if(test.toLowerCase() == "ui") {
+  tests = ["**/ui/**/?(*.)+(spec|test).[t]s"]
+}
+else {
+  tests = ["**/?(*.)+(spec|test).[t]s"]
+}
 
 return {
-  // runner: "groups",
+  preset:"ts-jest",
+  testRunner: "jest-circus/runner",
   // runner: "jest-docblock-runner",
-  displayName: "Playwright Automation - Krishna",
+  displayName: "Selenium Automation : Krishna",
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -32,7 +39,7 @@ return {
   // clearMocks: false,
 
   // Indicates whether the coverage information should be collected while executing the test
-  // collectCoverage: true,
+  collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   // collectCoverageFrom: undefined,
@@ -41,10 +48,10 @@ return {
   // coverageDirectory: "coverage",
 
   // An array of regexp pattern strings used to skip coverage collection
-  // coveragePathIgnorePatterns: [
-  //   "\\node_modules\\",
-  //     "src/utils"
-  // ],
+  coveragePathIgnorePatterns: [
+    "/node_modules/",
+      "src/utils"
+  ],
 
   // Indicates which provider should be used to instrument code for coverage
   // coverageProvider: "babel",
@@ -132,6 +139,7 @@ return {
       // "openReport": true
     }],
     "jest-junit",
+    "jest-image-snapshot/src/outdated-snapshot-reporter.js",
     "jest-allure2-adapter"
   ],
 
@@ -152,7 +160,7 @@ return {
 
   // A list of paths to directories that Jest should use to search for files in
   roots: [
-    "./src/"
+    "./src"
   ],
 
   // Allows you to use a custom runner instead of Jest's default test runner
@@ -162,7 +170,8 @@ return {
   // setupFiles: [""],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  setupFilesAfterEnv: ["./jest.setup.ts", "jest-allure2-adapter/dist/setup-default"],
+  // setupFilesAfterEnv: ["./jest.setup.ts", "jest-allure2-adapter/dist/setup-default"],
+  setupFilesAfterEnv: [],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,
@@ -187,11 +196,12 @@ return {
   //   "**/?(*.)+(spec|test).[t]s"
   // ],
 
+  // testMatch: tests,
   testMatch: tests,
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   testPathIgnorePatterns: [
-    "\\node_modules\\"
+    "/node_modules/"
   ],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
@@ -214,7 +224,7 @@ return {
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   transformIgnorePatterns: [
-    "\\node_modules\\",
+    "/node_modules/",
     //   "\\.pnp\\.[^\\\\]+$"
   ],
 
