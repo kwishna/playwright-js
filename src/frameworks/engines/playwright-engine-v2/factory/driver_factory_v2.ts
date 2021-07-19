@@ -1,4 +1,4 @@
-import {Browser, BrowserContext, Page} from "playwright-core";
+import {Browser, BrowserContext, Page} from "playwright";
 import {BrowserConfiguration} from "../configurations/browser_interfaces_v2";
 import {defaultConfiguration, defaultContext} from "../configurations/browser_configurations";
 import {ServiceProvider} from "../services/service_provider_v2"

@@ -1,5 +1,5 @@
 import {BrowserFactory} from "../factory/driver_factory_v2";
-import {Browser, BrowserContext, Page} from "playwright-core";
+import {Browser, BrowserContext, Page} from "playwright";
 import {chromeConfiguration} from "../configurations/browser_configurations";
 
 

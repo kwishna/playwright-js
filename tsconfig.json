@@ -54,6 +54,7 @@
     "types": [
       "@types/lodash",
       "node",
+      "playwright",
       "selenium-webdriver",
       "@jest/globals",
       "@types/jest",

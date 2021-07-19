@@ -1,4 +1,4 @@
-import {Frame, Page} from "playwright-core";
+import {Frame, Page} from "playwright";
 
 export interface SearchContext {
     locator: string

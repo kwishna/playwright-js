@@ -1,4 +1,4 @@
-import {ElementHandle, Frame, Page, Response} from "playwright-core"
+import {ElementHandle, Frame, Page, Response} from "playwright"
 import {PageContext, PageLoadContext, SearchContext} from "../interfaces/search_context";
 
 export default class BasePage {

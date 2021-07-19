@@ -1,4 +1,4 @@
-import {Browser, BrowserServer} from "playwright-core";
+import {Browser, BrowserServer} from "playwright";
 
 export interface BrowserLauncher {
     browser_server_launcher(endpoint: string): Promise<Browser>

@@ -1,4 +1,4 @@
-import {Browser, BrowserServer} from "playwright-core";
+import {Browser, BrowserServer} from "playwright";
 import {BrowserConfiguration, BrowserLauncher} from "../configurations/browser_interfaces_v2";
 import {ChromiumLauncher} from "../launchers/chrome_launcher_v2"
 import {WebkitLauncher} from "../launchers/webkit_launcher_v2"

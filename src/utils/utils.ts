@@ -2,7 +2,7 @@ import moment from "moment";
 import path from "path";
 import projectRootDirectory from "project-root-directory"
 import {addAttach, addMsg} from "jest-html-reporters/helper"
-import {ElementHandle, Page} from "playwright-core";
+import {ElementHandle, Page} from "playwright";
 
 export async function attachScreenshot(page: Page, testName: string) {
     try {

@@ -1,5 +1,5 @@
 import { BrowserConfiguration } from "./browser_interfaces_v2";
-import { BrowserContextOptions } from "playwright-core";
+import { BrowserContextOptions } from "playwright";
 import { currentProjectDir } from "../../../../utils/utils"
 
 export const defaultConfiguration: BrowserConfiguration = {

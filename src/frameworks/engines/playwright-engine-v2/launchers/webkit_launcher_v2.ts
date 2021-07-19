@@ -1,4 +1,4 @@
-import {Browser, BrowserServer, webkit} from "playwright-core";
+import {Browser, BrowserServer, webkit} from "playwright";
 import {BrowserConfiguration, BrowserLauncher} from "../configurations/browser_interfaces_v2"
 
 export class WebkitLauncher implements BrowserLauncher {

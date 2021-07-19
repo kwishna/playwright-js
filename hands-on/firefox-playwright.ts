@@ -1,4 +1,4 @@
-const { firefox: firefoxPlaywright } = require('playwright-core');
+const { firefox: firefoxPlaywright } = require('playwright');
 
 (async () => {
     const browser = await firefoxPlaywright.launch({ headless: false, slowMo: 50 });

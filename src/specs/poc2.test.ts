@@ -1,4 +1,4 @@
-import {Browser, BrowserContext, BrowserServer, chromium, FileChooser, Page} from "playwright-core";
+import {Browser, BrowserContext, BrowserServer, chromium, FileChooser, Page} from "playwright";
 import BasePage from "../pages/base_page";
 
 let basePage;

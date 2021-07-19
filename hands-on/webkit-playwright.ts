@@ -1,4 +1,4 @@
-const { webkit: webkitPlaywright } = require('playwright-core');
+const { webkit: webkitPlaywright } = require('playwright');
 
 (async () => {
     const browser = await webkitPlaywright.launch({ headless: false, slowMo: 50 });

@@ -1,5 +1,5 @@
 import {BrowserConfiguration} from "../configurations/browser_interfaces_v2";
-import {Browser} from "playwright-core";
+import {Browser} from "playwright";
 import {ServerHandler} from "./service_handler_v2";
 
 export class ServiceProvider {

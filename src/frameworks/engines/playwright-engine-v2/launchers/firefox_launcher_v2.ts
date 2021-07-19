@@ -1,4 +1,4 @@
-import {Browser, BrowserServer, firefox} from "playwright-core";
+import {Browser, BrowserServer, firefox} from "playwright";
 import {BrowserConfiguration, BrowserLauncher} from "../configurations/browser_interfaces_v2"
 
 export class FirefoxLauncher implements BrowserLauncher {
